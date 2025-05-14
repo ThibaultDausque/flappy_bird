@@ -11,12 +11,12 @@ RM = rm -f
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) $(INCLUDES) -Lminilibx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+	$(CC) $(OBJS) $(INCLUDES) -Lminilibx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
 $(DIR)/%.o: %.c
 	@mkdir -p $(@D)
 	@cd minilibx && make -s
-	@$(CC) $(FLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(INCLUDES) -c $< -o $@
 
 clean :
 	@rm -rf $(DIR)
