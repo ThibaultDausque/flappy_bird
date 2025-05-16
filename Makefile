@@ -1,6 +1,7 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-SRC = src/main.c
+SRC = src/main.c \
+	  src/gravity.c
 INCLUDES = -Iincludes -Iminilibx
 NAME = flappy_bird
 DIR = obj

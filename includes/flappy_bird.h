@@ -12,4 +12,13 @@ typedef struct s_data
 	int		img_width;
 }	t_data;
 
+typedef struct s_bird
+{
+	int		pos_x;
+	int		pos_y;
+}	t_bird;
+
+//////gravity//////
+int	gravity(t_bird *flappy);
+
 #endif
