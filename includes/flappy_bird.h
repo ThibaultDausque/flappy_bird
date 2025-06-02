@@ -14,11 +14,16 @@ typedef struct s_data
 
 typedef struct s_bird
 {
+	void	*mlx;
+	void	*mlx_win;
 	int		pos_x;
 	int		pos_y;
 }	t_bird;
 
 //////gravity//////
-int	gravity(t_bird *flappy);
+int	gravity(void *param);
+
+//--- main ---
+void	put_flappy(void *mlx, void *mlx_win, t_bird *bird);
 
 #endif
